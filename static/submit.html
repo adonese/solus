@@ -1,0 +1,25 @@
+<form action="/submit" method="post">
+    <div>
+        <label for="ipin">Enter the IPIN: </label>
+        <input type="text" name="ipin" id="name" required>
+    </div>
+    <div>
+        <label for="uuid">Enter UUID: </label>
+        <input type="text" name="uuid" id="email" required>
+    </div>
+    <div>
+        <div>
+            <label for="pubkey">Enter public key: </label>
+            <input type="text" name="pubkey" id="email" required>
+        </div>
+        <input type="submit" value="Subscribe!">
+    </div>
+</form>
+
+{{.pinBlock}}
+
+{{ if .error }}
+
+<p>{{ .error}}</p>
+
+{{end}}
