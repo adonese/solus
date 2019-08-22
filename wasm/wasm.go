@@ -27,7 +27,12 @@ func add(this js.Value, i []js.Value) interface{} {
 func main() {
 	js.Global().Set("add", js.FuncOf(add))
 	js.Global().Set("encrypt", js.FuncOf(encrypt))
+	select {
+	default:
+		<-c
+	}
 	<-c
+
 }
 
 // encrypt list of items are as follows:
